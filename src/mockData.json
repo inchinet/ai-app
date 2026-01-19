@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "type": "work",
+    "title": "AI Image Gallery",
+    "content": "A collection of AI generated images using Midjourney and DALL-E 3.",
+    "media": [
+      { "type": "image", "url": "https://picsum.photos/seed/ai1/800/450", "name": "cyberpunk_city.jpg" }
+    ],
+    "date": "2026-01-17T12:00:00Z"
+  },
+  {
+    "id": 2,
+    "type": "program",
+    "title": "Neural Style Transfer",
+    "content": "A small utility to apply artistic styles to photos using TensorFlow.js.",
+    "url": "https://example.com/style-transfer",
+    "date": "2026-01-16T15:30:00Z"
+  }
+]

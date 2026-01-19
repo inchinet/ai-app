@@ -1,0 +1,40 @@
+# ------------------------------------------------------------------------------
+# AI App Deployment Configuration
+# ------------------------------------------------------------------------------
+
+# Disable directory listing for security
+Options -Indexes
+
+RewriteEngine On
+
+# Ensure RewriteBase matches your Alias (e.g., /ai-app)
+# If your URL is https://domain.com/ai-app/, use /ai-app/
+RewriteBase /ai-app/
+
+# 1. Map /api/* requests to server/api.php
+# Allows the frontend to call: /ai-app/api/posts
+RewriteRule ^api/(.*)$ server/api.php/$1 [L,QSA]
+
+# 2. Map /uploads/* requests to server/uploads/*
+# Allows loading images from: /ai-app/uploads/image.jpg
+RewriteRule ^uploads/(.*)$ server/uploads/$1 [L]
+
+# 3. Handle React Frontend Routing (SPA fallback)
+# If the request is not for a real file or directory, serve index.html
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . index.html [L]
+
+# 4. Increase PHP Upload Limits (If permitted by server)
+<IfModule mod_php7.c>
+    php_value upload_max_filesize 200M
+    php_value post_max_size 210M
+    php_value max_execution_time 300
+    php_value max_input_time 300
+</IfModule>
+<IfModule mod_php.c>
+    php_value upload_max_filesize 200M
+    php_value post_max_size 210M
+    php_value max_execution_time 300
+    php_value max_input_time 300
+</IfModule>
