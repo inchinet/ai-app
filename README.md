@@ -24,7 +24,6 @@ To work on this project locally on your Windows PC:
 ## 🔑 Admin Access & Google Login
 To access the Admin interface:
 1.  **Google Sign-In**: Authorized for your gmail.
-2.  **Dev Bypass**: In development mode, click the small spy emoji (🕵️) next to the login button.
 
 ## 🛠️ Deployment (To Linux)
 1.  Run `npm run build` on your Windows PC.
