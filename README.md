@@ -24,6 +24,9 @@ To work on this project locally on your Windows PC:
 ## 🔑 Admin Access & Google Login
 To access the Admin interface:
 1.  **Google Sign-In**: Authorized for your gmail.
+2.  edit /server/api.php, use your own:
+    const ADMIN_EMAIL = '';
+    const GOOGLE_CLIENT_ID = '';
 
 ## 🛠️ Deployment (To Linux)
 1.  Run `npm run build` on your Windows PC.
