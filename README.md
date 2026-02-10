@@ -27,6 +27,8 @@ To access the Admin interface:
 2.  edit /server/api.php, use your own:
     const ADMIN_EMAIL = '';
     const GOOGLE_CLIENT_ID = '';
+3.  sudo chmod -R 775 /ai-app/server
+4.  sudo chmod 700 /ai-app/server/api.php
 
 ## 🛠️ Deployment (To Linux)
 1.  Run `npm run build` on your Windows PC.
